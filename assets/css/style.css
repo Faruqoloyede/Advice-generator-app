@@ -1,10 +1,90 @@
-
 :root {
     ---Light-Cyan: hsl(193, 38%, 86%);
     ---Neon-Green: hsl(150, 100%, 66%);
     --Grayish-Blue: hsl(217, 19%, 38%);
-    ---Dark-Blue: hsl(217, 19%, 24%);
+    ---Dark: hsl(217, 19%, 24%);
     ---Dark-Blue: hsl(218, 23%, 16%);
     ---qoute-font: 28px;
     ---font: 'Manrope', sans-serif;
+}
+
+/*==========LAYOUTS==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(---Dark-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: var(---font);
+}
+
+.advice_container {
+    background-color: var(---Dark);
+    padding: 30px;
+    text-align: center;
+    max-width: 500px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.advice_number{
+    color: var(---Neon-Green);
+}
+
+.advice_wrapper {
+   margin: 2rem 0;
+}
+
+.advice_wrapper p {
+    font-size: var(---qoute-font);
+    line-height: 1.5;
+    color: var(---Light-Cyan);
+}
+
+.divider img{
+    margin-bottom: 2rem;
+}
+
+.dice{
+    background-color: var(---Neon-Green);
+    position: absolute;
+    padding: 20px;
+    border-radius: 50%;
+    left: 45%;
+    cursor: pointer;
+}
+
+.dice img {
+    width: 30px;
+}
+
+@media (max-width: 680px) {
+    .advice_container {
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    .advice_wrapper p {
+        font-size: 18px;
+    }
+
+    .divider img {
+        width: 250px;
+    }
+
+    .dice {
+        bottom: -30px;
+        left: 45%;
+        padding: 15px;
+    }
+
+    .dice img {
+        width: 25px;
+    } 
 }
